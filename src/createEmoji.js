@@ -6,13 +6,13 @@ export default (className) => {
     var canvas = document.getElementById("canvas");
     if (canvas.getContext) {
       var ctx = document.getElementById('canvas').getContext('2d');
+      const width_rate = 1 / text.length
+      ctx.setTransform(width_rate,0,0,1,0,0)
       ctx.fillStyle = 'white'
-      ctx.fillRect(0, 0, 128, 128)
+      ctx.fillRect(0, 0, 128 / width_rate, 128)
       ctx.fillStyle = 'black'
       ctx.font = "bold 128px ゴシック";
-      const width_rate = 1 / text.length
-      ctx.scale(width_rate, 1)
-      ctx.fillText(text, 0, 115);
+      ctx.fillText(text, 0, 115)
       console.log(canvas.toDataURL())
     }
     return
