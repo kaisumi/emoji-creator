@@ -11,6 +11,7 @@ export default (className) => {
       ctx.fillStyle = 'black'
       ctx.font = "48px serif";
       ctx.fillText(text, 10, 50);
+      ctx.scale(0.5, 1)
       console.log(canvas.toDataURL())
     }
     return
