@@ -3,6 +3,11 @@
   <head>
     <title>Emoji Creator</title>
     <meta charset="utf-8"/>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
     <script type="module">
       import generator from './src/createEmoji.js'
       const text = generator('.input')
@@ -15,6 +20,6 @@
         <input type="text" class="input" />
       </div>
     </div>
-    <canvas id="canvas" width="300" height="150"></canvas>
+    <canvas id="canvas" width="128" height="128"></canvas>
   </body>
 </html>
