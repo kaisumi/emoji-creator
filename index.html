@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="module">
+    import generator from './src/createEmoji.js'
+    const text = generator('.input')
+  </script>
+ </head>
+ <body>
+  <div class='container'>
+    <div class='wrap'>
+      <div>Try typing <code>:dog:</code></div>
+      <input type='text' class='input' />
+    </div>
+  </div>
+   <canvas id="canvas" width="300" height="150"></canvas>
+ </body>
+</html>
