@@ -9,10 +9,10 @@ export default (className) => {
       const width_rate = 1 / text.length
       ctx.setTransform(width_rate,0,0,1,0,0)
       ctx.fillStyle = 'white'
-      ctx.fillRect(0, 0, 128 / width_rate, 128)
+      ctx.fillRect(0, 0, canvas.width / width_rate, canvas.height)
       ctx.fillStyle = 'black'
-      ctx.font = "bold 128px ゴシック";
-      ctx.fillText(text, 0, 115)
+      ctx.font = `bold ${canvas.height}px ゴシック`;
+      ctx.fillText(text, 0, canvas.height - 18)
       console.log(canvas.toDataURL())
     }
     return
