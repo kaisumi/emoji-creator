@@ -17,6 +17,11 @@ export default () => {
     }
   }
 
+  function showDataURL() {
+    let div_element = document.getElementById('emoji_data_url')
+    return div_element.textContent = canvas.toDataURL()
+  }
+
   function draw(text) {
     filename = `${text}.png`
     if (canvas.getContext) {
@@ -31,6 +36,7 @@ export default () => {
       ctx.fillRect(0, 0, metrics.width, height)
       ctx.fillStyle = 'black'
       ctx.fillText(text, 0, metrics.actualBoundingBoxAscent)
+      showDataURL()
     }
     return
   }

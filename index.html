@@ -7,6 +7,10 @@
       canvas {
         border: 1px solid black;
       }
+      textarea {
+        width:100%;
+        height:200px;
+      }
     </style>
     <script type="module">
       import generator from './src/createEmoji.js'
@@ -17,14 +21,18 @@
     <div class="container">
       <div class="wrap">
         <div>コロン「:」で始まる文字列を入力してください。例：<code>:いいね</code></div>
+        <!--入力欄-->
         <input id="emoji_input" type="text" />
       </div>
     </div>
     <canvas id="canvas" width="128" height="128"></canvas>
-    <br>
+    <br />
     <!--ダウンロード用ボタン-->
     <button id="emoji_download_button">ダウンロードする</button>
     <!--ダウンロード用リンク-->
     <a id="emoji_download_link"></a>
+    <br />
+    <!--表示用-->
+    <textarea id="emoji_data_url"></textarea>
   </body>
 </html>
