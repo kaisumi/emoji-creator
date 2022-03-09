@@ -3,9 +3,9 @@ export default (className) => {
   const input = document.querySelector(className)
 
   function draw(text) {
-    var canvas = document.getElementById("canvas");
+    let canvas = document.getElementById("canvas");
     if (canvas.getContext) {
-      var ctx = document.getElementById('canvas').getContext('2d');
+      let ctx = document.getElementById('canvas').getContext('2d');
       const width_rate = 1 / text.length
       ctx.setTransform(width_rate,0,0,1,0,0)
       ctx.fillStyle = 'white'
@@ -13,7 +13,7 @@ export default (className) => {
       ctx.fillStyle = 'black'
       ctx.font = `bold ${canvas.height}px ゴシック`;
       ctx.fillText(text, 0, canvas.height - 18)
-      console.log(canvas.toDataURL())
+      // console.log(canvas.toDataURL())
     }
     return
   }
