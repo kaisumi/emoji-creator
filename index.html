@@ -10,16 +10,21 @@
     </style>
     <script type="module">
       import generator from './src/createEmoji.js'
-      generator('.input')
+      generator()
     </script>
   </head>
   <body>
     <div class="container">
       <div class="wrap">
-        <div>Try typing <code>:dog:</code></div>
-        <input type="text" class="input" />
+        <div>コロン「:」で始まる文字列を入力してください。例：<code>:いいね</code></div>
+        <input id="emoji_input" type="text" />
       </div>
     </div>
     <canvas id="canvas" width="128" height="128"></canvas>
+    <br>
+    <!--ダウンロード用ボタン-->
+    <button id="emoji_download_button">ダウンロードする</button>
+    <!--ダウンロード用リンク-->
+    <a id="emoji_download_link"></a>
   </body>
 </html>
