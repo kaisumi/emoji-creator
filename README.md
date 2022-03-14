@@ -6,6 +6,13 @@ npm install emoji-creator
 ```
 
 ## Usage
+Put the code below somewhere in your HTML file.
+```html
+<script type="module">
+  import generator from './node_modules/emoji-creator/index.js'
+  generator()
+</script>
+```
 Insert a 128x128 canvas along with an input area with id "emoji_input" for basic use.
 ```html
 <canvas id="canvas" width="128" height="128">
@@ -39,7 +46,7 @@ Output data can be displayed using a texarea with id "emoji_data_url".
       }
     </style>
     <script type="module">
-      import generator from 'emoji-creator'
+      import generator from './node_modules/emoji-creator/index.js'
       generator()
     </script>
   </head>
