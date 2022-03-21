@@ -14,7 +14,7 @@
     </style>
     <script type="module">
       import generator from './node_modules/emoji-creator/index.js'
-      generator()
+      generator({inputId: 'emoji_input_another_name'})
     </script>
   </head>
   <body>
@@ -22,7 +22,7 @@
       <div class="wrap">
         <div>コロン「:」で始まる文字列を入力してください。例：<code>:いいね</code></div>
         <!--入力欄-->
-        <input id="emoji_input" type="text" />
+        <input id="emoji_input_another_name" type="text" />
       </div>
     </div>
     <canvas id="canvas" width="128" height="128"></canvas>
