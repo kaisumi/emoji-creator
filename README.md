@@ -29,6 +29,14 @@ Output data can be displayed using a texarea with id "emoji_data_url".
 <textarea id="emoji_data_url"></textarea>
 ```
 
+The ids above can be changed using following arguments:
+| Argument | Default Value |
+| --- | --- |
+| inputId | 'emoji_input' |
+| downloadButton | 'emoji_download_button' |
+| downloadLink  | 'emoji_download_link' |
+| dataUrl | 'emoji_data_url' |
+
 ### Sample
 ```html
 <!DOCTYPE html>
@@ -47,7 +55,7 @@ Output data can be displayed using a texarea with id "emoji_data_url".
     </style>
     <script type="module">
       import generator from './node_modules/emoji-creator/index.js'
-      generator()
+      generator({inputId: 'emoji_input_another_name'})
     </script>
   </head>
   <body>
@@ -55,7 +63,7 @@ Output data can be displayed using a texarea with id "emoji_data_url".
       <div class="wrap">
         <div>Input a word starting with a colon, such as: <code>:Like</code></div>
         <!--Input area-->
-        <input id="emoji_input" type="text" />
+        <input id="emoji_input_another_name" type="text" />
       </div>
     </div>
     <!--Canvas-->
