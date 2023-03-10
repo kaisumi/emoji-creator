@@ -52,3 +52,4 @@ export default ({ inputId = 'emoji_input', downloadButton = 'emoji_download_butt
 }
 
 // テスト
+// テスト2
