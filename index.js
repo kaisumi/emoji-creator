@@ -50,3 +50,5 @@ export default ({ inputId = 'emoji_input', downloadButton = 'emoji_download_butt
   events.map((event) => input.addEventListener(event, onInput))
   button.addEventListener('click', onClickDownload(downloadLink))
 }
+
+// テスト
